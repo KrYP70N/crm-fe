@@ -1,0 +1,70 @@
+$no-shadow: '.btn--disabled, [disabled], .btn--disabled--outline, .btn--disabled--outline-filled'
+
+@mixin renderVarient($background, $color: $light)
+  background: $background
+  color: $color
+  border-color: $background
+  &--outline
+    background: none
+    border-color: $background
+    color: $background
+  &--outline-filled
+    background: rgba($background, .5)
+    color: $background
+    border-color: $background
+
+.btn
+  padding: 12px
+  font-size: 16px
+  background: $light-bg
+  border: 1px solid transparent
+  color: $light-text
+  transition: box-shadow .3s ease
+  cursor: no-drop
+  text-align: center
+  text-decoration: none
+  display: inline-block
+
+  &.btn--disabled, [disabled]
+    pointer-events: none
+
+  &:not(#{$no-shadow}):hover
+    box-shadow: 1px 1px 10px rgba($dark, .5)
+    cursor: pointer
+
+  &--primary
+    @include renderVarient($primary)
+
+  &--secondary
+    @include renderVarient($secondary)
+
+  &--tertiary
+    @include renderVarient($light-text, $dark)
+
+  &--dark
+    @include renderVarient($dark)
+
+  &--danger
+    @include renderVarient($danger)
+
+  &--disabled
+    @include renderVarient(rgba($dark, .3), rgba($dark, .5))
+
+  &--light
+    @include renderVarient($light, $dark)
+
+  &--radius
+    border-radius: 6px
+
+  &--medium
+    padding: 14px
+
+  &--large
+    padding: 18px
+
+  &--block
+    display: block
+    width: 100%
+    margin-bottom: 12px
+    &:last-child
+      margin-bottom: 0

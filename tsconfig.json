@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "isolatedModules": false,
+    "jsx": "react-native",
+    "lib": ["es2021", "ES2021.String"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "baseUrl": "./src",
+    "paths": {
+      "@interface": ["core/interface"]
+    }
+  },
+  "include": ["./src"],
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
