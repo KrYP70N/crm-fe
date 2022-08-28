@@ -8,8 +8,8 @@ import TypoGraphy from './Typography'
 const StyleGuide = () : JSX.Element => {
   return (
     <main id='style-guide' className='container'>
-      <Gird>
-        <Col>
+      {/* <Gird> */}
+        {/* <Col> */}
           <Sidebar data={[
             {
               text: 'Typo',
@@ -24,13 +24,12 @@ const StyleGuide = () : JSX.Element => {
               link: '#form'
             }
           ]}/>
-        </Col>
-      </Gird>
-      <Col>
+      {/* </Gird> */}
+      {/* <Col> */}
         <TypoGraphy />  
         <Button />
         <Form />
-      </Col>
+      {/* </Col> */}
     </main>
   )
 }
